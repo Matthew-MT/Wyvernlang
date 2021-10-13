@@ -25,7 +25,7 @@
 
 ### Object Operations and Access
 
-* `<obj>.<prop>` returns `<obj> | <val>`
+* `<obj>.<prop>` returns `<val> | <obj>`
 * `<obj> + <obj>` returns `<obj>` where the returned object contains all values of the two added objects
 * `<obj> U <obj>` returns `<obj>` same as above
 * `<obj> N <obj>` returns `<obj>` returned object only contains common values between the input objects
