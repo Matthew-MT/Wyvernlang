@@ -9,11 +9,11 @@
 
 ### Object Operations and Access
 
-* `<obj>.<prop> => <obj> | <val>`
-* `<obj> + <obj> => <obj>` where the returned object contains all values of the two added objects
-* `<obj> U <obj> => <obj>` same as above
-* `<obj> N <obj> => <obj>` returned object only contains common values between the input objects
-* `<obj> is <class> => <bool>`
+* `<obj>.<prop>` returns `<obj> | <val>`
+* `<obj> + <obj>` returns `<obj>` where the returned object contains all values of the two added objects
+* `<obj> U <obj>` returns `<obj>` same as above
+* `<obj> N <obj>` returns `<obj>` returned object only contains common values between the input objects
+* `<obj> is <class>` returns `<bool>`
 * `<obj>.<prop>` equivalent to `. <obj> <prop>` by treating `.` as a function (see below)
   * It follows that `<obj>.<prop>.<prop>` is equivalent to `.. <obj> <prop> <prop>`
 
@@ -27,7 +27,7 @@
 ### Functions
 
 * `define function myFnc(...) as <stmt>;`
-* `fnc(<val0>, <val1>, ...); == fnc <val0> <val1> ... == <val0> fnc <val1>, ...;`
+* `fnc(<val0>, <val1>, ...);` equivalent to `fnc <val0> <val1> ...` equivalent to `<val0> fnc <val1>, ...;`
   * Note that the second and third possibilities differ in delimitation
 * `define myFnc(...) as {if <val>, then statement[0]; else statement[1]; return;}`
   * Provides `myFnc(...) with statements = [{...}, {...}, ...];`
