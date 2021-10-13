@@ -52,8 +52,9 @@
   * Provides `complex(<val0>, <val1>)fnc(<val2>);` equivalent to `<val0> complex <val1> fnc <val2>;`
   * Note that the second possibility from trivial functions is absent for complex functions
   * Note that for the second possibility for complex functions to be used, function parameters must be `2,1,1,...` in order
-* `define myFnc(...) -> {if <val>, then statement[0]; else statement[1]; return;}`
-  * Provides `myFnc(...) with statements = [{...}, {...}, ...];`
+* `define myFnc(...) -> {if <val>, then statement[0]; return;}`
+  * Provides `myFnc(...) {...};`
+  * Provides `complex(...) {...} fnc(...) {...}`
 * `lambda fnc` lambda "operator" treats the given function as a name instead of function call, allowing you to pass it as a parameter
   * Provides `myFnc(lambda function (...) -> <stmt>, ...);`
   * Provides `<var> = lambda function (...) -> <stmt>;`
