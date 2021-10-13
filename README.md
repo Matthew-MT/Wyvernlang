@@ -46,7 +46,7 @@
 * `<...>` list or map of `<type>` or `<class>`
 * `<var> = <val0> if <bool>, else <val1>;` ternary qualifier
 * An element from `<list>myValues` may be referred to as `<type>myValue[i]` by treating the trailing `s` as a qualifier
-  * Unable to distinguish complex plurality, so `<list>myWolves` can only be accessed in this manner with `<type>myWolve`, not `<type>myWolf`
+  * Unable to distinguish complex plurality, so `<list>myWolves` can only be accessed in this manner with `<type>myWolve[i]`, not `<type>myWolf[i]`
 
 ### Misc Language Features
 
