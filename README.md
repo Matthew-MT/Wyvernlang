@@ -27,8 +27,8 @@
 ### Functions
 
 * `define function myFnc(...) as <stmt>;`
-* `fnc(<val0>, <val1>, ...); == <val0> fnc <val1>, ...;`
-
+* `fnc(<val0>, <val1>, ...); == fnc <val0> <val1> ... == <val0> fnc <val1>, ...;`
+  * Note that the second and third possibilities differ in delimitation
 * `define myFnc(...) as {if <val>, then statement[0]; else statement[1]; return;}`
   * Provides `myFnc(...) with statements = [{...}, {...}, ...];`
 
