@@ -27,8 +27,7 @@
 ### Functions
 
 * `define function myFnc(...) as <stmt>;`
-* `fnc(<val0>, <val1>, ...);` equivalent to `fnc <val0> <val1> ...` equivalent to `<val0> fnc <val1>, ...;`
-  * Note that the second and third possibilities differ in delimitation
+* `fnc(<val0>, <val1>, ...);` equivalent to `fnc: <val0> <val1> ...` equivalent to (for 2-ary functions only) `<val0> fnc <val1>;`
 * `define myFnc(...) as {if <val>, then statement[0]; else statement[1]; return;}`
   * Provides `myFnc(...) with statements = [{...}, {...}, ...];`
 
