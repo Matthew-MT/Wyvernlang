@@ -20,6 +20,9 @@
 * `if not <bool>, then <stmt>;`
 * `for key i in <list>, <stmt>;`
 * `for value i in <list>, <stmt>;`
+* From `<list>values`, `for each value, <stmt>;` follows (see plurality qualifiers in the variables and types section)
+  * May rename: `for each item in values, <stmt>;`
+  * Note that the `each` keyword only iterates over values
 * `while <bool>, do <stmt>;`
 * `do <stmt>, while <bool>;`
 
