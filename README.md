@@ -18,8 +18,8 @@
 
 * `if <bool>, then <stmt>;`
 * `if not <bool>, then <stmt>;`
-* `for key i in <list>, <stmt>;`
-* `for value i in <list>, <stmt>;`
+* `for key i in <obj>, <stmt>;`
+* `for value i in <obj>, <stmt>;`
 * From `<list>values`, `for each value, <stmt>;` follows (see plurality qualifiers in the variables and types section)
   * May rename: `for each item in values, <stmt>;`
   * Note that the `each` keyword only iterates over values
@@ -61,7 +61,7 @@
 ### Variables and Types
 
 * `let myVar be <type> from <val>;` general variable declaration
-* `let listVar be <list> from [<val00>, <val10>; <val01>, <val11>)];` 2-dimensional list declaration
+* `let listVar be <list> from [<val00>, <val10>; <val01>, <val11>)];` 2-dimensional list declaration (see delimination level below)
 * `assign <val> to <var>;` alternate form of `<var> = <val>;`
 * `<val0> if <bool>, else <val1>` ternary qualifier
 * An element from `<list>myValues` may be referred to as `<type>myValue[i]` by treating the trailing `s` as a qualifier
