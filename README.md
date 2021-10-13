@@ -27,7 +27,11 @@
 ### Functions
 
 * `define function myFnc(...) as <stmt>;`
-* `fnc(<val0>, <val1>, ...);` equivalent to `fnc: <val0> <val1> ...` equivalent to (for 2-ary functions only) `<val0> fnc <val1>;`
+* `fnc(<val0>, <val1>, ...);` equivalent to `fnc: <val0> <val1> ...;` equivalent to (for 2-ary functions only) `<val0> fnc <val1>;`
+* `define function complex(...)fnc(...) as <stmt>;`
+  * Provides `complex(<val0>, <val1>)fnc(<val2>);` equivalent to `<val0> complex <val1> fnc <val2>;`
+  * Note that the second possibility from trivial functions is absent for complex functions
+  * Note that for the second possibility for complex functions to be used, function parameters must be `2,1,1,...` in order
 * `define myFnc(...) as {if <val>, then statement[0]; else statement[1]; return;}`
   * Provides `myFnc(...) with statements = [{...}, {...}, ...];`
 
@@ -41,6 +45,8 @@
 * `(...)` list or map of variable assignments (equivalent to function parameters)
 * `<...>` list or map of `<type>` or `<class>`
 * `<var> = <val0> if <bool>, else <val1>;` ternary qualifier
+* An element from `<list>myValues` may be referred to as `<type>myValue[i]` by treating the trailing `s` as a qualifier
+  * Unable to distinguish complex plurality, so `<list>myWolves` can only be accessed in this manner with `<type>myWolve`, not `<type>myWolf`
 
 ### Misc Language Features
 
