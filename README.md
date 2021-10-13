@@ -49,12 +49,12 @@
 * `define function myFnc(...) -> <stmt>;`
 * `fnc(<val0>, <val1>, ...);` equivalent to (for finite-ary functions only ((see spread operator below))) `fnc <val0> <val1> ...;` equivalent to (for 2-ary functions only) `<val0> fnc <val1>;`
 * `define function complex(...)fnc(...) -> <stmt>;`
-  * Provides `complex(<val0>, <val1>)fnc(<val2>);` equivalent to `<val0> complex <val1> fnc <val2>;`
+  * Provides `complex(<val0>, <val1>)fnc(<val2>);` equivalent to `<val1> complex <val0> fnc <val2>;`
   * Note that the second possibility from trivial functions is absent for complex functions
-  * Note that for the second possibility for complex functions to be used, function parameters must be `2,1,1,...` in order
+  * Note that for the second possibility for complex functions to be used, function parameters must be `1-2,1,1,...` in order
 * `define myFnc(...) -> {if <val>, then statement[0]; return;}`
   * Provides `myFnc(...) {...};`
-  * Provides `complex(...) {...} fnc(...) {...}`
+  * Provides `complex(...) {...} fnc(...) {...};` equivalent to `<val1> complex <val0> {...} fnc <val2> {...};`
 * `lambda fnc` lambda "operator" treats the given function as a name instead of function call, allowing you to pass it as a parameter
   * Provides `myFnc(lambda function (...) -> <stmt>, ...);`
   * Provides `<var> = lambda function (...) -> <stmt>;`
